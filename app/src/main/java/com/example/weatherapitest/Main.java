@@ -9,15 +9,6 @@ public class Main {
     private String pressure;
     private String humidity;
 
-    public Main(String temp, String feels_like, String temp_min, String temp_max, String pressure, String humidity) {
-        this.temp = temp;
-        this.feels_like = feels_like;
-        this.temp_min = temp_min;
-        this.temp_max = temp_max;
-        this.pressure = pressure;
-        this.humidity = humidity;
-    }
-
     public String getTemp() {
         return temp;
     }

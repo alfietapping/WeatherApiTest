@@ -4,46 +4,93 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/daybackground"
+    android:id="@+id/screenBackground"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/locationName"
+        android:id="@+id/locationTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="LOCATION NAME"
+        android:layout_marginTop="28dp"
+        android:text="LONDON"
+        android:textColor="#FFFFFF"
+        android:textSize="32sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/mainDescription"
+        android:id="@+id/dateTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MAIN DESCRIPTION"
-        android:layout_marginTop="32dp"
+        android:text="Monday, April 20"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/locationName" />
+        app:layout_constraintTop_toBottomOf="@+id/locationTv" />
 
-    <TextView
-        android:id="@+id/furtherDetails"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="FURTHER DETAILS"
-        android:layout_marginTop="32dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mainDescription" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/temperatureTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginBottom="48dp"
+            android:text="20°"
+            android:textColor="#FFFFFF"
+            android:textSize="96sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/conditionImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="48dp"
+            android:src="@drawable/ic_sun_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/temperatureTv"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/conditionTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SUNNY"
+            android:textSize="20sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="48dp"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/temperatureTv"
+            app:layout_constraintTop_toBottomOf="@+id/conditionImageView" />
+
+        <TextView
+            android:id="@+id/timeStampTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/temperatureTv"
+            app:layout_constraintTop_toBottomOf="@+id/conditionTv" />
 
 
-
-
-
-
-
-
-
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
